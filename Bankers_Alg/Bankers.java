@@ -24,7 +24,7 @@ public class Bankers {
         // Task_2\Task2_Input2.txt
     //File inputFile = new File(scan.nextLine());
     scan.close();
-    File inputFile = new File("Bankers_Alg\\gfgExample.txt");
+    File inputFile = new File("Bankers_Alg\\inClassExample.txt");
     
     try {
         Scanner fileScan = new Scanner(inputFile);
