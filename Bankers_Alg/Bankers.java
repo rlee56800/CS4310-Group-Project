@@ -69,7 +69,7 @@ public class Bankers {
         fileScan.nextLine(); // empty line
         
         // populate available matrix
-        System.out.println("\nAVAILABLE MATRIX:");
+        System.out.println("\nAVAILABLE VECTOR:");
         numbers = fileScan.nextLine().split(" ");
         for(int i = 0; i < m; i++) {
             available[i] = Integer.parseInt(numbers[i]);
@@ -138,17 +138,23 @@ public class Bankers {
     }
      
     void calculateNeed() {
+        System.out.println("\nNEED MATRIX:");
         for (int i = 0;i < n; i++) {
             for (int j = 0;j < m; j++) {
             need[i][j] = max[i][j]-allocation[i][j];
+            System.out.print(need[i][j] + " ");
             }
+            System.out.println();
         }       
     }
  
     public static void main(String[] args) { 
       Bankers bank = new Bankers();
           
-      bank.initializeValues();   
+      bank.initializeValues(); 
+      
+      System.out.println("\n------------------------------------------\n");
+      
       //Calculate the Need Matrix   
       bank.calculateNeed();           
              
